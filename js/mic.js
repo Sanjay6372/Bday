@@ -1,11 +1,10 @@
 navigator.mediaDevices.getUserMedia({ audio: true })
 .then(stream => {
-  const audioContext = new AudioContext();
-  const mic = audioContext.createMediaStreamSource(stream);
-  const analyser = audioContext.createAnalyser();
+  const ctx = new AudioContext();
+  const mic = ctx.createMediaStreamSource(stream);
+  const analyser = ctx.createAnalyser();
 
   mic.connect(analyser);
-
   const data = new Uint8Array(analyser.frequencyBinCount);
 
   function detect() {
