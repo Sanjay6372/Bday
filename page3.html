@@ -1,37 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cake 🎂</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-
-<body class="page3">
-
 <h2 class="glow">Make a wish & blow candles 🎂</h2>
 
-<div class="cake" id="cake">
-  <div class="candles">
-    <div class="candle"><div class="flame"></div></div>
-    <div class="candle"><div class="flame"></div></div>
-    <div class="candle"><div class="flame"></div></div>
+<div class="cake-container">
+  <div class="cake" id="cake">
+
+    <!-- LEFT HALF -->
+    <div class="slice left"></div>
+
+    <!-- RIGHT HALF -->
+    <div class="slice right"></div>
+
+    <!-- icing -->
+    <div class="icing"></div>
+
+    <!-- candles -->
+    <div class="candles">
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+
   </div>
 </div>
-
-<p id="micStatus">Tap below & blow 🎤</p>
-
-<button onclick="startMic()">Blow Candles 🎤</button>
-<button onclick="cutCake()">Cut Cake 🔪</button>
-<button onclick="startMusic('page4.html')">Next ➡️</button>
-
-<audio id="music" loop>
-  <source src="assets/music/page3.mp3">
-</audio>
-
-<script src="js/main.js"></script>
-<script src="js/mic.js"></script>
-<script src="js/cake.js"></script>
-<script>createHearts();</script>
-
-</body>
-</html>
