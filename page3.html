@@ -8,13 +8,22 @@
 
 <body class="page3">
 
-<h2>Make a wish & blow candles 🎂</h2>
+<h2 class="glow">Make a wish & blow candles 🎂</h2>
 
 <div class="cake">
-  <div class="flame">🔥</div>
-  <div class="flame">🔥</div>
+  <div class="layer"></div>
+  <div class="icing"></div>
+
+  <div class="candles">
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+  </div>
 </div>
 
+<p id="micStatus">Tap below & blow 🎤</p>
+
+<button onclick="startMic()">Blow Candles 🎤</button>
 <button onclick="cutCake()">Cut Cake 🔪</button>
 <button onclick="nextPage('page4.html')">Next ➡️</button>
 
@@ -28,6 +37,7 @@
 
 <script>
 window.onload = () => document.body.classList.add("loaded");
+createHearts();
 </script>
 
 </body>
