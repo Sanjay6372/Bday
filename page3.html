@@ -11,28 +11,23 @@
 <h2 class="title">Make a wish & blow candles 🎂</h2>
 
 <div class="cake" id="cake">
-  <div class="slice left"></div>
-  <div class="slice right"></div>
+
   <div class="top"></div>
 
   <div class="candles">
-    <div>
-      <div class="flame"></div>
-      <div class="candle"></div>
-    </div>
-    <div>
-      <div class="flame"></div>
-      <div class="candle"></div>
-    </div>
-    <div>
-      <div class="flame"></div>
-      <div class="candle"></div>
-    </div>
+    <div class="candle"><div class="flame" id="f1"></div></div>
+    <div class="candle"><div class="flame" id="f2"></div></div>
+    <div class="candle"><div class="flame" id="f3"></div></div>
   </div>
+
+  <div class="slice left"></div>
+  <div class="slice right"></div>
+
 </div>
 
-<p>Tap below 💨</p>
+<p>Tap below 🎤</p>
 
+<button onclick="blowCandles()">Blow Candles 🎤</button>
 <button onclick="cutCake()">Cut Cake 🔪</button>
 <button onclick="nextPage('page4.html')">Next ➡️</button>
 
