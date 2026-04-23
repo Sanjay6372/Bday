@@ -9,30 +9,16 @@
 <body class="page4">
 
 <div class="letter">
-  <p id="text"></p>
+  <h2>Happy Birthday ❤️</h2>
+  <p>
+    You are my world 💕<br>
+    I love you forever...
+  </p>
 </div>
 
-<audio id="music" loop>
+<audio autoplay loop>
   <source src="assets/music/page4.mp3">
 </audio>
-
-<script src="js/main.js"></script>
-
-<script>
-let msg = "Happy Birthday ❤️<br><br>You are my world 💕<br>I love you forever...";
-let i = 0;
-
-function type() {
-  if (i <= msg.length) {
-    document.getElementById("text").innerHTML = msg.substring(0, i);
-    i++;
-    setTimeout(type, 40);
-  }
-}
-type();
-
-createHearts();
-</script>
 
 </body>
 </html>
