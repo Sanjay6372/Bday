@@ -12,7 +12,6 @@ body {
   height: 100vh;
 }
 
-/* IMAGE */
 .hero-img {
   width: 200px;
   border-radius: 50%;
@@ -57,7 +56,6 @@ body {
   height: 100px;
 }
 
-/* BASE */
 .base {
   position: absolute;
   bottom: 0;
@@ -68,7 +66,6 @@ body {
   transition: 0.4s;
 }
 
-/* TOP */
 .top {
   position: absolute;
   top: 0;
@@ -78,7 +75,7 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
-/* CUT EFFECT (WORKING) */
+/* CUT EFFECT */
 .cake.cut .base {
   transform: scaleX(0.6);
 }
