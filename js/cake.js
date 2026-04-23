@@ -1,3 +1,3 @@
 function cutCake() {
-  document.querySelector(".cake").style.transform = "scale(0.8)";
+  document.querySelector(".cake").style.transform = "rotate(5deg) scale(0.9)";
 }
