@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memories 💕</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memories 💖</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page2">
 
-  <h2>Our Memories 💕</h2>
+<div class="gallery">
 
-  <div class="gallery">
-
-    <div class="card">
-      <img src="assets/images/img1.jpg">
-    </div>
-
-    <div class="card">
-      <img src="assets/images/img2.jpg">
-    </div>
-
-    <div class="card">
-      <img src="assets/images/img3.jpg">
-    </div>
-
+  <div class="card">
+    <img src="assets/images/img1.jpg">
+    <p>The day you came into my life ❤️</p>
   </div>
 
-  <button onclick="nextPage('page3.html')">Next ➡️</button>
+  <div class="card">
+    <img src="assets/images/img2.jpg">
+    <p>Your smile is my favorite 💫</p>
+  </div>
 
-  <script src="js/main.js"></script>
+  <div class="card">
+    <img src="assets/images/img3.jpg">
+    <p>Every moment with you matters 💕</p>
+  </div>
+
+</div>
+
+<button onclick="startMusic('page3.html')">Next ➡️</button>
+
+<audio id="music" loop>
+  <source src="assets/music/page2.mp3">
+</audio>
+
+<script src="js/main.js"></script>
+<script>createHearts();</script>
+
 </body>
 </html>
