@@ -3,13 +3,10 @@ function nextPage(page) {
 }
 
 function cutCake() {
-  const cake = document.getElementById("cake");
-  if (cake) {
-    cake.classList.add("cut");
-  }
+  document.getElementById("cake").classList.add("cut");
 }
 
-/* ❤️ HEARTS EFFECT */
+/* HEARTS */
 function createHearts() {
   setInterval(() => {
     const heart = document.createElement("div");
@@ -21,33 +18,30 @@ function createHearts() {
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-      heart.remove();
-    }, 6000);
+    setTimeout(() => heart.remove(), 6000);
   }, 500);
 }
 
-/* ✍️ TYPING EFFECT (PAGE 4) */
+/* TYPING EFFECT */
 function typeText() {
-  const el = document.getElementById("loveText");
-  if (!el) return; // only run on page4
-
   const text = "You are my world 💕 I love you forever...";
   let i = 0;
 
   function typing() {
     if (i < text.length) {
-      el.innerHTML += text.charAt(i);
+      document.getElementById("loveText").innerHTML += text.charAt(i);
       i++;
       setTimeout(typing, 50);
     }
   }
 
-  typing();
+  if (document.getElementById("loveText")) {
+    typing();
+  }
 }
 
-/* 🚀 START (ALL PAGES) */
+/* START */
 window.onload = () => {
-  createHearts();   // hearts on all pages
-  typeText();       // runs only if page4 has #loveText
+  createHearts();
+  typeText();
 };
