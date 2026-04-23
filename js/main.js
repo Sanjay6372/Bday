@@ -1,25 +1,14 @@
-function startMusic(page) {
-  localStorage.setItem("playMusic", "true");
+function nextPage(page) {
   window.location.href = page;
 }
 
-window.onload = function () {
-  const music = document.getElementById("music");
-
-  if (localStorage.getItem("playMusic") === "true" && music) {
-    music.play().catch(()=>{});
-  }
-
+window.onload = () => {
   document.body.classList.add("loaded");
-};
 
-function createHearts() {
-  for (let i = 0; i < 6; i++) {
-    let h = document.createElement("div");
-    h.innerHTML = "❤️";
-    h.className = "heart";
-    h.style.left = Math.random()*100+"vw";
-    h.style.fontSize = (Math.random()*20+10)+"px";
-    document.body.appendChild(h);
+  const music = document.getElementById("music");
+  if (music) {
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
   }
-}
+};
