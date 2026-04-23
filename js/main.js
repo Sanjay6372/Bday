@@ -3,10 +3,19 @@ function nextPage(page) {
 }
 
 function startMusic(page) {
-  let m = document.getElementById("music");
-  if(m) m.play().catch(()=>{});
+  localStorage.setItem("playMusic", "true");
   window.location.href = page;
 }
+
+window.onload = function () {
+  const music = document.getElementById("music");
+
+  if (localStorage.getItem("playMusic") === "true" && music) {
+    music.play().catch(()=>{});
+  }
+
+  document.body.classList.add("loaded");
+};
 
 function createHearts() {
   for (let i = 0; i < 12; i++) {
@@ -15,7 +24,6 @@ function createHearts() {
     h.className = "heart";
     h.style.left = Math.random()*100+"vw";
     h.style.fontSize = (Math.random()*20+10)+"px";
-    h.style.animationDuration = (Math.random()*3+3)+"s";
     document.body.appendChild(h);
   }
 }
