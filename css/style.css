@@ -1,12 +1,12 @@
-/* GLOBAL FIX (VERY IMPORTANT) */
+/* GLOBAL FIX */
 * {
   box-sizing: border-box;
 }
 
 html, body {
+  margin: 0;
   width: 100%;
   overflow-x: hidden;
-  margin: 0;
   font-family: cursive;
   text-align: center;
 }
@@ -14,16 +14,20 @@ html, body {
 /* ================= PAGE 1 ================= */
 .page1 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   padding: 20px;
 }
 
+.container {
+  width: 100%;
+  max-width: 350px;
+}
+
 .hero-img {
   width: 80%;
-  max-width: 260px;
+  max-width: 250px;
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
@@ -47,7 +51,7 @@ html, body {
 
 .card {
   width: 100%;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.8);
   padding: 10px;
   border-radius: 15px;
 }
@@ -61,8 +65,38 @@ html, body {
   display: block;
 }
 
-/* ================= KEEP YOUR PAGE 3 & 4 BELOW (UNCHANGED) ================= */
-/* DO NOT MODIFY YOUR EXISTING PAGE 3 & PAGE 4 CSS */
+.card p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ================= PAGE 3 (UNCHANGED) ================= */
+.page3 {
+  background: linear-gradient(#ffd1dc, #ffe4e1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ================= PAGE 4 (UNCHANGED) ================= */
+.page4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe0ec, #ffd6e0);
+  padding: 20px;
+}
+
+.letter {
+  width: 90%;
+  max-width: 320px;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+}
 
 /* BUTTON */
 button {
@@ -72,6 +106,19 @@ button {
   border-radius: 25px;
   background: #ff4d6d;
   color: white;
+}
+
+/* HEARTS */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  animation: floatUp 6s linear;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+  }
 }
 
 /* MOBILE TWEAK */
