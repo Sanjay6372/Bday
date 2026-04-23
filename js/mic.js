@@ -1,5 +1,5 @@
 function startMic() {
-  document.getElementById("micStatus").innerText = "Listening... blow now 💨";
+  document.getElementById("micStatus").innerText = "Listening... blow 💨";
 
   navigator.mediaDevices.getUserMedia({ audio: true })
   .then(stream => {
@@ -8,7 +8,6 @@ function startMic() {
     const analyser = ctx.createAnalyser();
 
     mic.connect(analyser);
-
     const data = new Uint8Array(analyser.frequencyBinCount);
 
     function detect() {
@@ -17,7 +16,6 @@ function startMic() {
 
       if(volume > 60){
         document.querySelectorAll(".flame").forEach(f=>f.style.display="none");
-        document.getElementById("micStatus").innerText = "🎉 Candles blown!";
       }
 
       requestAnimationFrame(detect);
