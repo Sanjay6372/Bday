@@ -12,6 +12,7 @@
   <img src="assets/images/her.png" class="hero-img">
   <h1 class="glow">Hey Love ❤️</h1>
   <p>I made something special for you...</p>
+
   <button onclick="startMusic('page2.html')">Start 💕</button>
 </div>
 
@@ -20,7 +21,10 @@
 </audio>
 
 <script src="js/main.js"></script>
-<script>createHearts();</script>
+<script>
+window.onload = () => document.body.classList.add("loaded");
+createHearts();
+</script>
 
 </body>
 </html>
