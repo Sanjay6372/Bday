@@ -12,25 +12,31 @@
 
 <div class="cake" id="cake">
 
-  <div class="top"></div>
-
-  <div class="candles">
-    <div class="candle"><div class="flame" id="f1"></div></div>
-    <div class="candle"><div class="flame" id="f2"></div></div>
-    <div class="candle"><div class="flame" id="f3"></div></div>
-  </div>
-
   <div class="slice left"></div>
   <div class="slice right"></div>
 
+  <div class="top"></div>
+
+  <div class="candles">
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+  </div>
+
 </div>
 
-<p>Tap below 🎤</p>
+<p id="status">Tap & blow 🎤</p>
 
-<button onclick="blowCandles()">Blow Candles 🎤</button>
+<button onclick="startMic()">Blow Candles 🎤</button>
 <button onclick="cutCake()">Cut Cake 🔪</button>
 <button onclick="nextPage('page4.html')">Next ➡️</button>
 
+<audio autoplay loop>
+  <source src="assets/music/page3.mp3">
+</audio>
+
 <script src="js/main.js"></script>
+<script src="js/mic.js"></script>
+
 </body>
 </html>
