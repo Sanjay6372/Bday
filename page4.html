@@ -19,17 +19,19 @@
 <script src="js/main.js"></script>
 
 <script>
-let msg = "You mean everything to me ❤️";
+let msg = "Happy Birthday ❤️<br><br>You are my everything 💕<br>I love you forever...";
 let i = 0;
 
 function type() {
   if(i < msg.length){
     document.getElementById("text").innerHTML += msg.charAt(i);
     i++;
-    setTimeout(type, 50);
+    setTimeout(type, 40);
   }
 }
 type();
+
+window.onload = () => document.body.classList.add("loaded");
 </script>
 
 </body>
