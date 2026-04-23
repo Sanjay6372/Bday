@@ -23,15 +23,14 @@ let msg = "Happy Birthday ❤️<br><br>You are my world 💕<br>I love you fore
 let i = 0;
 
 function type() {
-  if(i < msg.length){
-    document.getElementById("text").innerHTML += msg.charAt(i);
+  if (i <= msg.length) {
+    document.getElementById("text").innerHTML = msg.substring(0, i);
     i++;
     setTimeout(type, 40);
   }
 }
 type();
 
-window.onload = () => document.body.classList.add("loaded");
 createHearts();
 </script>
 
