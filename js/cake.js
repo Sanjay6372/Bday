@@ -1,3 +1,7 @@
 function cutCake() {
-  document.getElementById("cake").classList.add("cut");
+  const cake = document.getElementById("cake");
+
+  if (!cake.classList.contains("cut")) {
+    cake.classList.add("cut");
+  }
 }
