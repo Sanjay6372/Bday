@@ -10,8 +10,11 @@
 
 <h2 class="glow">Make a wish & blow candles 🎂</h2>
 
-<div class="cake">
-  <div class="layer"></div>
+<div class="cake" id="cake">
+
+  <div class="half left"></div>
+  <div class="half right"></div>
+
   <div class="icing"></div>
 
   <div class="candles">
@@ -19,6 +22,7 @@
     <div class="candle"><div class="flame"></div></div>
     <div class="candle"><div class="flame"></div></div>
   </div>
+
 </div>
 
 <p id="micStatus">Tap below & blow 🎤</p>
@@ -34,11 +38,7 @@
 <script src="js/main.js"></script>
 <script src="js/mic.js"></script>
 <script src="js/cake.js"></script>
-
-<script>
-window.onload = () => document.body.classList.add("loaded");
-createHearts();
-</script>
+<script>createHearts();</script>
 
 </body>
 </html>
