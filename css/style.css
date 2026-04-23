@@ -46,12 +46,22 @@ body.loaded { opacity: 1; }
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  align-items: center;
 }
 
 .card {
+  width: 90%;
+  max-width: 320px;
   background: rgba(255,255,255,0.6);
   padding: 15px;
   border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
 /* CAKE */
