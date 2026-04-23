@@ -10,28 +10,36 @@
 
 <h2 class="title">Make a wish & blow candles 🎂</h2>
 
-<div class="cake" id="cake">
+<div class="cake-container">
 
-  <div class="slice left"></div>
-  <div class="slice right"></div>
+  <div class="cake" id="cake">
 
-  <div class="top"></div>
+    <!-- LEFT PART -->
+    <div class="slice left"></div>
 
-  <div class="candles">
-    <div class="candle"><div class="flame"></div></div>
-    <div class="candle"><div class="flame"></div></div>
-    <div class="candle"><div class="flame"></div></div>
+    <!-- RIGHT PART -->
+    <div class="slice right"></div>
+
+    <!-- ICING -->
+    <div class="icing"></div>
+
+    <!-- CANDLES -->
+    <div class="candles">
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+
   </div>
-
 </div>
 
-<p id="status">Tap & blow 🎤</p>
+<p id="status">Tap below & blow 🎤</p>
 
 <button onclick="startMic()">Blow Candles 🎤</button>
 <button onclick="cutCake()">Cut Cake 🔪</button>
 <button onclick="nextPage('page4.html')">Next ➡️</button>
 
-<audio autoplay loop>
+<audio id="music" loop>
   <source src="assets/music/page3.mp3">
 </audio>
 
