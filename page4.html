@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final ❤️</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page4">
+
+<div class="final-box">
+  <p id="text"></p>
+</div>
+
+<audio id="music" loop>
+  <source src="assets/music/page4.mp3">
+</audio>
+
+<script src="js/main.js"></script>
+
+<script>
+let msg = "You mean everything to me ❤️";
+let i = 0;
+
+function type() {
+  if(i < msg.length){
+    document.getElementById("text").innerHTML += msg.charAt(i);
+    i++;
+    setTimeout(type, 50);
+  }
+}
+type();
+</script>
+
+</body>
+</html>

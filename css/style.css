@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: cursive;
+  text-align: center;
+}
+
+/* Page 1 */
+.page1 {
+  background: linear-gradient(#ff9a9e, #fad0c4);
+}
+
+.hero-img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card img {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.card {
+  animation: fade 1s ease;
+}
+
+/* Cake */
+.cake {
+  font-size: 50px;
+}
+
+.flame {
+  display: inline-block;
+}
+
+/* Final */
+.final-box {
+  border: 3px solid pink;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 20px;
+  border: none;
+  background: pink;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fade {
+  from {opacity:0;}
+  to {opacity:1;}
+}
