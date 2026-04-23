@@ -4,46 +4,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cake 🎂</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page3">
 
-  <!-- TITLE -->
   <h2 class="title">Make a wish & blow candles 🎂</h2>
 
-  <!-- CAKE -->
   <div class="cake-container">
     <div class="cake" id="cake">
-
-      <!-- icing -->
       <div class="icing"></div>
 
-      <!-- candles -->
       <div class="candles">
         <div class="candle"><div class="flame"></div></div>
         <div class="candle"><div class="flame"></div></div>
         <div class="candle"><div class="flame"></div></div>
       </div>
-
     </div>
   </div>
 
-  <!-- TEXT -->
-  <p>Tap below & blow 🎤</p>
+  <p class="hint">Tap below & blow 🎤</p>
 
-  <!-- BUTTONS -->
   <button onclick="startMic()">Blow Candles 🎤</button>
   <button onclick="cutCake()">Cut Cake 🔪</button>
   <button onclick="nextPage('page4.html')">Next ➡️</button>
 
-  <!-- MUSIC -->
   <audio id="music" loop>
     <source src="assets/music/page3.mp3">
   </audio>
 
-  <!-- JS -->
   <script src="js/main.js"></script>
   <script src="js/mic.js"></script>
   <script src="js/cake.js"></script>
