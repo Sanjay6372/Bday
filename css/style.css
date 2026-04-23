@@ -1,20 +1,36 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', cursive;
+  font-family: cursive;
   text-align: center;
   opacity: 0;
   transition: 0.8s;
 }
 body.loaded { opacity: 1; }
 
-/* backgrounds */
-.page1, .page2, .page3, .page4 {
-  background: linear-gradient(135deg, #ffe6eb, #ffd1dc);
+/* PAGE 1 FIX */
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-/* glow text */
-.glow {
-  text-shadow: 0 0 10px pink;
+/* PAGE 3 FIX */
+.page3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  height: 100vh;
+}
+
+/* PAGE 4 CENTER */
+.page4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* image */
@@ -28,47 +44,51 @@ body.loaded { opacity: 1; }
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
   padding: 20px;
 }
 
 .card {
   background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 25px;
   padding: 15px;
-  box-shadow: 0 10px 30px rgba(255,100,150,0.3);
+  border-radius: 20px;
 }
 
-.card img {
-  width: 85%;
-  border-radius: 15px;
-}
-
-/* 🎂 realistic cake */
+/* CAKE */
 .cake {
-  width: 200px;
-  height: 150px;
-  margin: 40px auto;
   position: relative;
+  width: 200px;
+  height: 120px;
+  margin-top: 40px;
 }
 
-.layer {
-  width: 100%;
-  height: 100px;
+.half {
+  position: absolute;
+  width: 50%;
+  height: 100%;
   background: #ff8fa3;
-  border-radius: 10px;
+  transition: 0.6s;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+.cake.cut .left {
+  transform: translateX(-30px) rotate(-10deg);
+}
+.cake.cut .right {
+  transform: translateX(30px) rotate(10deg);
 }
 
 .icing {
-  width: 100%;
-  height: 40px;
-  background: #fff;
-  border-radius: 10px 10px 0 0;
   position: absolute;
+  width: 100%;
+  height: 30px;
+  background: white;
   top: 0;
 }
 
+/* candles */
 .candles {
   position: absolute;
   top: -30px;
@@ -78,10 +98,9 @@ body.loaded { opacity: 1; }
 }
 
 .candle {
-  width: 10px;
+  width: 8px;
   height: 30px;
   background: #ff4d6d;
-  position: relative;
 }
 
 .flame {
@@ -89,8 +108,6 @@ body.loaded { opacity: 1; }
   height: 15px;
   background: orange;
   border-radius: 50%;
-  position: absolute;
-  top: -15px;
   animation: flicker 0.3s infinite alternate;
 }
 
@@ -107,16 +124,13 @@ button {
   background: #ff4d6d;
   color: white;
   margin: 10px;
-  cursor: pointer;
 }
 
-/* final letter */
+/* letter */
 .letter {
-  margin: 50px;
   padding: 30px;
-  border-radius: 30px;
-  background: rgba(255,255,255,0.7);
-  box-shadow: 0 0 20px pink;
+  background: rgba(255,255,255,0.8);
+  border-radius: 25px;
 }
 
 /* hearts */
@@ -125,8 +139,6 @@ button {
   bottom: -10px;
   animation: floatUp 6s infinite;
 }
-
 @keyframes floatUp {
-  from { transform: translateY(0); }
   to { transform: translateY(-100vh); }
 }
