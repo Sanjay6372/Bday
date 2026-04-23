@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: cursive;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .center img {
+      width: 220px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px pink;
+    }
+
+    button {
+      padding: 12px 25px;
+      border-radius: 25px;
+      border: none;
+      background: white;
+      color: #ff4d6d;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
-<body class="page1">
+<body>
 
 <div class="center">
-  <img src="assets/images/her.png" class="hero-img">
+  <img src="assets/images/her.png" alt="her">
   <h1>Hey Love ❤️</h1>
   <p>I made something special for you...</p>
-  <button onclick="nextPage('page2.html')">Start 💕</button>
+
+  <!-- ✅ THIS WILL ALWAYS WORK -->
+  <a href="page2.html">
+    <button>Start 💕</button>
+  </a>
 </div>
 
+<!-- music -->
 <audio id="music" loop>
-  <source src="assets/music/page1.mp3">
+  <source src="assets/music/page1.mp3" type="audio/mpeg">
 </audio>
 
-<script src="js/main.js"></script>
+<script>
+  // autoplay music after first click (browser rule)
+  document.body.addEventListener("click", function () {
+    const music = document.getElementById("music");
+    if (music) {
+      music.play().catch(() => {});
+    }
+  });
+</script>
+
 </body>
 </html>
