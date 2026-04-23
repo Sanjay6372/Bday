@@ -2,8 +2,16 @@ function nextPage(page) {
   window.location.href = page;
 }
 
+/* CUT CAKE */
 function cutCake() {
   document.getElementById("cake").classList.add("cut");
+}
+
+/* BLOW CANDLES */
+function blowCandles() {
+  document.getElementById("f1").style.display = "none";
+  document.getElementById("f2").style.display = "none";
+  document.getElementById("f3").style.display = "none";
 }
 
 /* HEARTS */
@@ -22,22 +30,19 @@ function createHearts() {
   }, 500);
 }
 
-/* TYPING EFFECT */
+/* PAGE 4 TEXT */
 function typeText() {
   const text = "You are my world 💕 I love you forever...";
+  const el = document.getElementById("loveText");
+
+  if (!el) return;
+
   let i = 0;
-
-  function typing() {
-    if (i < text.length) {
-      document.getElementById("loveText").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typing, 50);
-    }
-  }
-
-  if (document.getElementById("loveText")) {
-    typing();
-  }
+  const interval = setInterval(() => {
+    el.innerHTML += text[i];
+    i++;
+    if (i === text.length) clearInterval(interval);
+  }, 50);
 }
 
 /* START */
