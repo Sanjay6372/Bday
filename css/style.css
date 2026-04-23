@@ -2,58 +2,85 @@ body {
   margin: 0;
   font-family: cursive;
   text-align: center;
-  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+}
+
+/* PAGE 1 */
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* IMAGE */
+.hero-img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* PAGE 2 */
+.page2 {
+  background: linear-gradient(#ffd1dc, #ffe4e1);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 300px;
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
 }
 
 /* PAGE 3 */
 .page3 {
+  background: linear-gradient(#ffd1dc, #ffe4e1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;   /* center vertically */
+  justify-content: center;
   height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* TITLE */
-.title {
-  font-size: 5vw;
-  max-font-size: 22px;
 }
 
 /* CAKE */
-.cake-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .cake {
   position: relative;
-  width: 150px;
+  width: 140px;
   height: 100px;
 }
 
 /* BASE */
-.cake::before {
-  content: "";
+.base {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 70px;
   background: #ff4d6d;
   border-radius: 10px;
+  transition: 0.4s;
 }
 
-/* ICING */
-.icing {
+/* TOP */
+.top {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 25px;
+  height: 30px;
   background: white;
   border-radius: 10px 10px 0 0;
+}
+
+/* CUT EFFECT (WORKING) */
+.cake.cut .base {
+  transform: scaleX(0.6);
 }
 
 /* CANDLES */
@@ -71,7 +98,6 @@ body {
   background: #ff4d6d;
 }
 
-/* FLAME */
 .flame {
   width: 8px;
   height: 10px;
@@ -85,18 +111,27 @@ body {
   to { transform: scale(1.2); }
 }
 
-/* CUT EFFECT */
-.cake.cut {
-  transform: scale(0.9);
-  opacity: 0.7;
+/* PAGE 4 */
+.page4 {
+  background: linear-gradient(#ffe0ec, #ffd6e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.letter {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 /* BUTTON */
 button {
-  margin: 10px;
   padding: 10px 20px;
-  border-radius: 25px;
+  margin: 10px;
   border: none;
+  border-radius: 25px;
   background: #ff4d6d;
   color: white;
 }
