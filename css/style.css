@@ -4,7 +4,56 @@ body {
   text-align: center;
 }
 
-/* PAGE 3 */
+/* ================= PAGE 1 (FIXED MOBILE CENTER) ================= */
+.page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hero-img {
+  width: 70vw;
+  max-width: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* ================= PAGE 2 (IMAGE FIX) ================= */
+.page2 {
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  width: 90%;
+  max-width: 320px;
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;   /* IMPORTANT FIX */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= PAGE 3 (DO NOT TOUCH - WORKING) ================= */
 .page3 {
   background: linear-gradient(#ffd1dc, #ffe4e1);
   display: flex;
@@ -14,7 +63,7 @@ body {
   height: 100vh;
 }
 
-/* TITLE FIX (space from cake) */
+/* TITLE FIX */
 .title {
   margin-bottom: 40px;
 }
@@ -93,6 +142,35 @@ body {
   to { transform: scale(1.2); }
 }
 
+/* ================= PAGE 4 (UNCHANGED) ================= */
+.page4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe0ec, #ffd6e0);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.letter {
+  width: 90%;
+  max-width: 320px;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+}
+
+/* ================= COMMON ================= */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4d6d;
+  color: white;
+}
+
 /* HEARTS */
 .heart {
   position: fixed;
@@ -104,14 +182,4 @@ body {
   to {
     transform: translateY(-110vh);
   }
-}
-
-/* BUTTON */
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 25px;
-  background: #ff4d6d;
-  color: white;
 }
