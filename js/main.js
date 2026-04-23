@@ -1,7 +1,3 @@
-function nextPage(page) {
-  window.location.href = page;
-}
-
 function startMusic(page) {
   localStorage.setItem("playMusic", "true");
   window.location.href = page;
@@ -18,7 +14,7 @@ window.onload = function () {
 };
 
 function createHearts() {
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 6; i++) {
     let h = document.createElement("div");
     h.innerHTML = "❤️";
     h.className = "heart";
