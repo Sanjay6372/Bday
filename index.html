@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome ❤️</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page1">
 
+<div class="center">
   <img src="assets/images/her.png" class="hero-img">
-
-  <h2>Hey Love ❤️</h2>
+  <h1 class="glow">Hey Love ❤️</h1>
   <p>I made something special for you...</p>
+  <button onclick="startMusic('page2.html')">Start 💕</button>
+</div>
 
-  <button onclick="nextPage('page2.html')">Start 💖</button>
+<audio id="music" loop>
+  <source src="assets/music/page1.mp3">
+</audio>
 
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
+<script>createHearts();</script>
+
 </body>
 </html>
