@@ -1,86 +1,37 @@
-/* GLOBAL */
 body {
   margin: 0;
   font-family: cursive;
   text-align: center;
-  opacity: 0;
-  transition: 0.8s;
-}
-body.loaded { opacity: 1; }
-
-/* ================= PAGE 1 ================= */
-.page1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.hero-img {
-  width: 220px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-/* ================= PAGE 2 ================= */
-.page2 {
   background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
 }
 
-.gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  width: 90%;
-  max-width: 320px;
-  background: rgba(255,255,255,0.7);
-  padding: 15px;
-  border-radius: 20px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-/* ================= PAGE 3 (FIXED) ================= */
+/* PAGE 3 */
 .page3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 40px;
   height: 100vh;
-  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
-  box-sizing: border-box;
+  padding-top: 40px;
 }
 
+/* TITLE */
 .title {
   font-size: 22px;
   margin-bottom: 20px;
 }
 
-/* CAKE CONTAINER */
+/* CAKE */
 .cake-container {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  width: 100%;
 }
 
-/* CAKE */
 .cake {
   position: relative;
-  width: 160px;
-  height: 110px;
+  width: 150px;
+  height: 100px;
 }
 
 /* BASE */
@@ -89,9 +40,9 @@ body.loaded { opacity: 1; }
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 80px;
-  background: linear-gradient(#ff758f, #ff4d6d);
-  border-radius: 12px;
+  height: 70px;
+  background: #ff4d6d;
+  border-radius: 10px;
 }
 
 /* ICING */
@@ -99,15 +50,15 @@ body.loaded { opacity: 1; }
   position: absolute;
   top: 0;
   width: 100%;
-  height: 30px;
+  height: 25px;
   background: white;
-  border-radius: 12px 12px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 /* CANDLES */
 .candles {
   position: absolute;
-  top: -25px;
+  top: -20px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -115,75 +66,36 @@ body.loaded { opacity: 1; }
 
 .candle {
   width: 6px;
-  height: 25px;
+  height: 20px;
   background: #ff4d6d;
-  border-radius: 3px;
 }
 
 /* FLAME */
 .flame {
   width: 8px;
-  height: 12px;
+  height: 10px;
   background: orange;
   border-radius: 50%;
   animation: flicker 0.3s infinite alternate;
 }
 
-/* CUT EFFECT (clean + stable) */
-.cake.cut {
-  transform: scale(0.9);
-  opacity: 0.85;
-  transition: 0.4s;
-}
-
-/* FLAME ANIMATION */
 @keyframes flicker {
   from { transform: scale(1); }
   to { transform: scale(1.2); }
 }
 
-/* ================= PAGE 4 ================= */
-.page4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;   /* CENTER FIX */
-  height: 100vh;
-  background: linear-gradient(135deg, #ffe0ec, #ffd6e0);
-  padding: 20px;
-  box-sizing: border-box;
+/* CUT EFFECT */
+.cake.cut {
+  transform: scale(0.9);
+  opacity: 0.7;
 }
 
-.letter {
-  width: 90%;
-  max-width: 320px;
-  padding: 25px;
-  background: rgba(255,255,255,0.9);
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* ================= BUTTON ================= */
+/* BUTTON */
 button {
-  padding: 12px 25px;
-  border-radius: 30px;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
   border: none;
   background: #ff4d6d;
   color: white;
-  margin: 10px;
-  font-size: 16px;
-}
-
-/* ================= HEARTS ================= */
-.heart {
-  position: fixed;
-  bottom: -10px;
-  animation: floatUp 6s linear infinite;
-  opacity: 0.6;
-  font-size: 14px;
-}
-
-@keyframes floatUp {
-  to {
-    transform: translateY(-100vh);
-  }
 }
