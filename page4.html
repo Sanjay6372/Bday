@@ -8,7 +8,7 @@
 
 <body class="page4">
 
-<div class="letter">
+<div class="final-box">
   <p id="text"></p>
 </div>
 
@@ -19,19 +19,17 @@
 <script src="js/main.js"></script>
 
 <script>
-let msg = "Happy Birthday ❤️<br><br>You are my world 💕<br>I love you forever...";
+let msg = "You mean everything to me ❤️";
 let i = 0;
 
 function type() {
-  if (i <= msg.length) {
-    document.getElementById("text").innerHTML = msg.substring(0, i);
+  if(i < msg.length){
+    document.getElementById("text").innerHTML += msg.charAt(i);
     i++;
-    setTimeout(type, 40);
+    setTimeout(type, 50);
   }
 }
 type();
-
-createHearts();
 </script>
 
 </body>
