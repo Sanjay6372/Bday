@@ -1,3 +1,3 @@
 function cutCake() {
-  document.getElementById("cake").classList.add("cut");
+  document.querySelector(".cake").style.transform = "scale(0.8)";
 }
